@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Car.Application.Dtos
 {
-    public class RequestDto
+    public class CarReqDto:RequestDto
     {
-       
     }
 }
