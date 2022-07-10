@@ -10,6 +10,7 @@ namespace Car.Data.Configuration
 {
     public class CarDbContext:DbContext
     {
+        public DbSet<Domain.Car> Cars => Set<Domain.Car>();
         public CarDbContext(DbContextOptions<CarDbContext> options) : base(options)
         {
 
@@ -17,6 +18,8 @@ namespace Car.Data.Configuration
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Domain.Car>().HasKey(c => c.Id);
+         
         }
+        
     }
 }

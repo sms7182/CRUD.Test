@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.API", "Car.API\Car.API.csproj", "{3E44C558-1344-4FFD-889D-E9B0CDA259BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.API", "Car.API\Car.API.csproj", "{3E44C558-1344-4FFD-889D-E9B0CDA259BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Domain", "Car.Domain\Car.Domain.csproj", "{FAFC4BD0-7B7E-49A1-AB3A-9382A7784BAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.Domain", "Car.Domain\Car.Domain.csproj", "{FAFC4BD0-7B7E-49A1-AB3A-9382A7784BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Data", "Car.Data\Car.Data.csproj", "{EDA7207E-E336-41F0-A61B-D9CAF77DFE88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.Data", "Car.Data\Car.Data.csproj", "{EDA7207E-E336-41F0-A61B-D9CAF77DFE88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Application", "Car.Application\Car.Application.csproj", "{E09ED9A7-AC12-41A4-A568-A4CC24D9DCCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Car.Application", "Car.Application\Car.Application.csproj", "{E09ED9A7-AC12-41A4-A568-A4CC24D9DCCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DBE1E9FD-C2FC-47FA-B6A3-31A0D5BA643C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1A538245-899D-4362-B9C2-C30784C376BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{E09ED9A7-AC12-41A4-A568-A4CC24D9DCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E09ED9A7-AC12-41A4-A568-A4CC24D9DCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E09ED9A7-AC12-41A4-A568-A4CC24D9DCCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A538245-899D-4362-B9C2-C30784C376BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A538245-899D-4362-B9C2-C30784C376BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A538245-899D-4362-B9C2-C30784C376BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A538245-899D-4362-B9C2-C30784C376BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

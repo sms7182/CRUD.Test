@@ -8,7 +8,7 @@ namespace Car.Domain
 {
     public class Car
     {
-        public DateTime CreationDate { get;private set; }
+        public DateTimeOffset CreationDate { get;private set; }
         public long Id { get;private set; }
         public string? Brand { get; set; }
         public string? Model { get; set; }

@@ -19,7 +19,11 @@ namespace Car.Application.CarServices.Commands
         }
         public override async Task<ResponseDto> Handler(CreateCarCommand request, CancellationToken cancellationToken = default)
         {
-            return new ResponseDto();
+            var dto = request.RequestDto;
+            var car= Domain.Car.CreateCar(dto.Brand, dto.Model, dto.Navigation);
+           await _carDbContext.Cars.AddAsync(car, cancellationToken);
+           await _carDbContext.SaveChangesAsync(cancellationToken);
+           return new ResponseDto() { IsSuccess=true};
         }
     }
 }

@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  cardb:
+    image: postgres
+    container_name: cardb
+    ports:
+    -  5432:5432
+    restart: always
+    environment:
+       POSTGRES_USER: postgres
+       POSTGRES_PASSWORD: postgres
+     
+  car.api:
+    image: ${DOCKER_REGISTRY-}carapi
+    build:
+      context: .
+      dockerfile: Car.API/Dockerfile
+    ports:
+     
+     - 5001:443
+     - 5000:80
+    depends_on: [cardb]
+    links:
+     - cardb 
