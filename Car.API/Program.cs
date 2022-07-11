@@ -19,7 +19,6 @@ builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    //options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(x =>
 {
     x.RequireHttpsMetadata = false;
@@ -36,7 +35,6 @@ builder.Services.AddAuthentication(options =>
 
 
 builder.Services.AddScoped<IUserService, UserService>();
-//builder.Services.AddScoped<JwtMiddleware>();
 
 
 
