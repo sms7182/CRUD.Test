@@ -20,11 +20,23 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     //options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = true;
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["AppSettings:Secret"])),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        SaveSigninToken = true,
+    };
 });
 
 
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<JwtMiddleware>();
+//builder.Services.AddScoped<JwtMiddleware>();
 
 
 
@@ -80,7 +92,7 @@ app.UseHttpsRedirection();
 
 
 app.UseRouting();
-app.UseMiddleware<JwtMiddleware>();
+//app.UseMiddleware<JwtMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 

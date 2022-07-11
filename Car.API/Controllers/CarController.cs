@@ -26,7 +26,6 @@ namespace Car.API.Controllers
             _userService = userService;
         }
 
-       
         [HttpPost("createCar")]
         public async Task<ActionResult<ResponseDto>> CreateCar([FromBody]CarDto car,CancellationToken cancellationToken=default)
         {
@@ -36,7 +35,6 @@ namespace Car.API.Controllers
             },cancellationToken);
         }
 
-//        [Authorize] 
         [HttpGet("getCars")]
         public async Task<ActionResult<CarResponseDto>> GetCars(CancellationToken cancellationToken = default)
         {
