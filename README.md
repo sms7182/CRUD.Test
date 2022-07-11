@@ -1,8 +1,12 @@
-# CRUD.Test
-this project a simple crud test with authorization:
-using postgresdb
-using microsoft identity
-and dockerize for run application
-for run application: 
-docker-compose build
-docker-compose up 
+# CRUD.Test:
+this project a simple crud test with authorization
+# requirements:
+  . using postgresdb
+  . using microsoft identity
+  . env: dockerize
+# commands for run: 
+  docker-compose build
+  docker-compose up 
+#Login:
+  user:test-user
+  pass:test1234
